@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
-import heroImg from "../../assets/hero.png";
+import heroImg from "../../assets/hero.webp";
 
 const ease = "cubic-bezier(0.77, 0, 0.175, 1)";
 
