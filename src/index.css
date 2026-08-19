@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FFFDF8;
+    color: #3B261C;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .font-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+  /* Section eyebrow label */
+  .section-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #8B5E3C;
+  }
+
+  /* Image zoom container */
+  .img-zoom { overflow: hidden; }
+  .img-zoom img {
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+  }
+  .img-zoom:hover img { transform: scale(1.05); }
+
+  /* Buttons — no border-radius, no lift, intentional */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #6B4226;
+    color: #FFFFFF;
+    padding: 0.9rem 2.2rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border: 1.5px solid #6B4226;
+    cursor: pointer;
+    transition: background 0.35s ease, border-color 0.35s ease, color 0.35s ease;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .btn-primary:hover { background: #4A2E1E; border-color: #4A2E1E; }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: #6B4226;
+    padding: 0.9rem 2.2rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border: 1.5px solid #6B4226;
+    cursor: pointer;
+    transition: background 0.35s ease, color 0.35s ease;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .btn-secondary:hover { background: #6B4226; color: #FFFFFF; }
+
+  .btn-primary-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #FFFDF8;
+    color: #3B261C;
+    padding: 0.9rem 2.2rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border: 1.5px solid #FFFDF8;
+    cursor: pointer;
+    transition: background 0.35s ease, color 0.35s ease;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .btn-primary-light:hover { background: #D9B99B; border-color: #D9B99B; }
+
+  .btn-outline-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: #FFFDF8;
+    padding: 0.9rem 2.2rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border: 1.5px solid rgba(255,253,248,0.4);
+    cursor: pointer;
+    transition: border-color 0.35s ease, background 0.35s ease;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .btn-outline-light:hover { border-color: #FFFDF8; background: rgba(255,253,248,0.08); }
+}
+
+/* Thin custom scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D9B99B; }
+
+/* Hide scrollbar on horizontal scroll strips */
+.hide-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.hide-scrollbar::-webkit-scrollbar { display: none; }

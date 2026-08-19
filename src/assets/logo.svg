@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 56" fill="none">
+  <g transform="translate(4, 6)">
+    <rect x="0" y="8" width="22" height="28" rx="2" fill="#FFFDF8" opacity="0.15" stroke="#FFFDF8" stroke-width="1.5"/>
+    <path d="M22 14 Q32 14 32 21 Q32 28 22 28" stroke="#FFFDF8" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M5 1 Q6.5 -2 5 -5" stroke="#FFFDF8" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M11 0 Q12.5 -3 11 -6" stroke="#FFFDF8" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M17 1 Q18.5 -2 17 -5" stroke="#FFFDF8" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.6"/>
+  </g>
+  <text x="48" y="38" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="600" fill="#FFFDF8" letter-spacing="5">MOKA</text>
+</svg>
